@@ -46,7 +46,7 @@ class CustomIssueTest extends \Codeception\Test\Unit
         ];
     }
 
-    public function testWrongState()
+    public function testSetVerifiedWrongState()
     {
         //需求确认直接转到测试通过，需要先转到开发中
         $this->expectException(Exception::class);
@@ -55,7 +55,7 @@ class CustomIssueTest extends \Codeception\Test\Unit
         $issue->setVerified();
     }
 
-    public function testWrongUser()
+    public function testSetVerifiedWrongUser()
     {
         //需要测试人员才可以转到验证，开发不可以
         $this->expectException(Exception::class);
@@ -64,7 +64,7 @@ class CustomIssueTest extends \Codeception\Test\Unit
         $issue->setVerified();
     }
 
-    public function testCorrectStateUser()
+    public function testSetVerifiedCorrectStateUser()
     {
         //测试人员将开发中转为验证通过
         Yii::$app->user->login(User::findByUsername('qa1'));
