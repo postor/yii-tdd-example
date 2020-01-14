@@ -1,5 +1,6 @@
 # yii2 测试驱动开发示例 | TDD example for yii2
 
+quick glance: https://www.youtube.com/watch?v=GdVmYISOqA8&list=PLM1v95K5B1ntVsYvNJIxgRPppngrO_X4s
 
 ## 环境准备
 
